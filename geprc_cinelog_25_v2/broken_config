@@ -1,0 +1,38 @@
+# set d_min_roll = 42
+###ERROR IN set: INVALID NAME: d_min_roll = 42###
+
+# set d_min_pitch = 47
+###ERROR IN set: INVALID NAME: d_min_pitch = 47###
+
+# set d_min_roll = 45
+###ERROR IN set: INVALID NAME: d_min_roll = 45###
+
+# set d_min_pitch = 51
+###ERROR IN set: INVALID NAME: d_min_pitch = 51###
+
+# set d_min_roll = 54
+###ERROR IN set: INVALID NAME: d_min_roll = 54###
+
+# set d_min_pitch = 61
+###ERROR IN set: INVALID NAME: d_min_pitch = 61###
+
+---
+
+# CORRECTED COMMANDS FOR BETAFLIGHT 2025.12.0-BETA:
+
+# ERROR: d_min parameters do not exist in Betaflight firmware
+# These should be removed from the configuration entirely.
+#
+# If you need to set PID values, use the correct Betaflight parameter names:
+set p_pitch = 47
+set i_pitch = 84
+set d_pitch = 34
+set f_pitch = 125
+set p_roll = 45
+set i_roll = 80
+set d_roll = 30
+set f_roll = 120
+set p_yaw = 45
+set i_yaw = 80
+set d_yaw = 0
+set f_yaw = 120

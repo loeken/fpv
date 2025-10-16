@@ -1,0 +1,232 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32G47X (G473) 2025.12.0-beta Oct  7 2025 / 11:40:16 (25d5bf70c) MSP API: 1.47
+# config rev: 247ea10
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name TAKERG4AIO
+manufacturer_id GEPR
+mcu_id 002800455446500d20363831
+signature 
+
+# name: CineLog 25 v2
+
+# feature
+feature GPS
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# serial
+serial UART1 131073 115200 57600 0 115200
+serial UART4 64 115200 57600 0 115200
+serial LPUART1 2 115200 115200 0 115200
+
+# beeper
+beeper -ON_USB
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 46 3 1700 2100 0 0
+aux 4 13 2 1200 2000 0 0
+aux 5 35 5 1700 2100 0 0
+
+# rxfail
+rxfail 3 s 1275
+rxfail 5 s 2000
+rxfail 6 s 1500
+
+# master
+set gyro_lpf1_type = PT2
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 4
+set gyro_lpf1_dyn_min_hz = 0
+set acc_calibration = -31,-7,-35,1
+set motor_pwm_protocol = DSHOT300
+set motor_output_reordering = 2,3,0,1,4,5,6,7
+set failsafe_delay = 6
+set failsafe_switch_mode = STAGE2
+set failsafe_procedure = GPS-RESCUE
+set align_board_pitch = 180
+set align_board_yaw = 90
+set bat_capacity = 720
+set vbat_max_cell_voltage = 435
+set vbat_min_cell_voltage = 340
+set vbat_warning_cell_voltage = 360
+set beeper_dshot_beacon_tone = 2
+set yaw_motors_reversed = ON
+set mixer_type = EZLANDING
+set small_angle = 180
+set gps_sbas_mode = AUTO
+set gps_ublox_use_galileo = ON
+set gps_set_home_point_once = ON
+set gps_rescue_ascend_rate = 400
+set gps_rescue_ground_speed = 400
+set gps_rescue_descent_dist = 10
+set gps_rescue_min_sats = 5
+set gps_rescue_allow_arming_without_fix = ON
+set deadband = 2
+set yaw_deadband = 2
+set osd_warn_bitmask = 163839
+set osd_link_quality_pos = 2464
+set osd_tim_1_pos = 1039
+set osd_tim_2_pos = 3119
+set osd_flymode_pos = 1103
+set osd_throttle_pos = 0
+set osd_crosshairs_pos = 313
+set osd_mah_drawn_pos = 2108
+set osd_craft_name_pos = 384
+set osd_gps_speed_pos = 3565
+set osd_gps_lon_pos = 3688
+set osd_gps_lat_pos = 2656
+set osd_gps_sats_pos = 3533
+set osd_home_dir_pos = 2084
+set osd_home_dist_pos = 2090
+set osd_altitude_pos = 3109
+set osd_warnings_pos = 14837
+set osd_avg_cell_voltage_pos = 2102
+set osd_battery_usage_pos = 2133
+set osd_esc_tmp_pos = 629
+set osd_sys_lq_pos = 449
+set osd_sys_vtx_temp_pos = 637
+set osd_stat_bitmask = 14188
+set debug_mode = GYRO_RAW
+set craft_name = CineLog 25 v2
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 67
+set dterm_lpf1_dyn_max_hz = 135
+set dterm_lpf1_static_hz = 67
+set dterm_lpf2_static_hz = 135
+set anti_gravity_gain = 120
+set yaw_lowpass_hz = 0
+set angle_p_gain = 60
+set angle_limit = 50
+set simplified_dterm_filter_multiplier = 90
+set tpa_mode = PD
+set tpa_rate = 50
+
+profile 1
+
+# profile 1
+set profile_name = master14
+set p_pitch = 65
+set i_pitch = 117
+set d_pitch = 47
+set f_pitch = 175
+set p_roll = 63
+set i_roll = 112
+set d_roll = 42
+set f_roll = 168
+set p_yaw = 63
+set i_yaw = 112
+set f_yaw = 168
+set d_max_roll = 0
+set d_max_pitch = 0
+set simplified_master_multiplier = 140
+
+profile 2
+
+# profile 2
+set profile_name = master15
+set p_pitch = 70
+set i_pitch = 126
+set d_pitch = 51
+set f_pitch = 187
+set p_roll = 67
+set i_roll = 120
+set d_roll = 45
+set f_roll = 180
+set p_yaw = 67
+set i_yaw = 120
+set f_yaw = 180
+set d_max_roll = 0
+set d_max_pitch = 0
+set simplified_master_multiplier = 150
+
+profile 3
+
+# profile 3
+set profile_name = master15
+set p_pitch = 84
+set i_pitch = 151
+set d_pitch = 61
+set f_pitch = 225
+set p_roll = 81
+set i_roll = 144
+set d_roll = 54
+set f_roll = 216
+set p_yaw = 81
+set i_yaw = 144
+set f_yaw = 216
+set d_max_roll = 0
+set d_max_pitch = 0
+set simplified_master_multiplier = 180
+
+# restore original profile selection
+profile 2
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 1
+set pitch_expo = 1
+set yaw_expo = 1
+set roll_srate = 59
+set pitch_srate = 59
+set yaw_srate = 59
+
+rateprofile 1
+
+rateprofile 2
+
+# rateprofile 2
+set roll_rc_rate = 5
+set pitch_rc_rate = 5
+set yaw_rc_rate = 5
+set roll_expo = 30
+set pitch_expo = 30
+set yaw_expo = 30
+set roll_srate = 59
+set pitch_srate = 59
+set yaw_srate = 64
+
+rateprofile 3
+
+# rateprofile 3
+set roll_rc_rate = 5
+set pitch_rc_rate = 5
+set yaw_rc_rate = 5
+set roll_expo = 57
+set pitch_expo = 57
+set yaw_expo = 57
+set roll_srate = 59
+set pitch_srate = 59
+set yaw_srate = 64
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

@@ -1,0 +1,51 @@
+Entering CLI Mode, type 'exit' to reboot, or 'help'
+
+# 
+# Building AutoComplete Cache ... Done!
+# 
+# diff all
+
+# version
+# Betaflight / STM32G47X (G473) 2025.12.0-beta Oct  7 2025 / 11:40:16 (25d5bf70c) MSP API: 1.47
+# config rev: 247ea10
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name TAKERG4AIO
+manufacturer_id GEPR
+mcu_id 002800455446500d20363831
+signature 
+
+# feature
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
